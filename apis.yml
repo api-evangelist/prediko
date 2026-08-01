@@ -1,7 +1,28 @@
 aid: prediko
 name: Prediko
-description: Prediko is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Prediko is an AI-powered inventory management and planning platform for Shopify
+  D2C and B2B brands, covering demand forecasting, supply and replenishment
+  planning, purchase-order management, raw-materials and bill-of-materials
+  tracking, and multi-location inventory. Prediko exposes a public REST API
+  (https://api.prediko.io/api/v1) authenticated with pk_live_ bearer API keys,
+  letting merchants and integrators manage orders, read SKU stock levels and
+  procurement suggestions, sync suppliers and warehouses, and automate inventory
+  workflows. "Pia" is Prediko's AI inventory agent. The company is backed by
+  Techstars.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/68ceeb4f2c25c399d42f4726/696653966c56edb6b763849e_predikoinventorymanagement.png
 url: https://raw.githubusercontent.com/api-evangelist/prediko/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +32,53 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Inventory Management
+- Demand Forecasting
+- Supply Chain
+- Ecommerce
+- Shopify
+- Purchase Orders
+- Retail
+- AI
+apis:
+- name: Prediko API
+  description: >-
+    Prediko's public REST API for inventory operations: manage orders and
+    deliveries, read SKUs and procurement suggestions, manage bill-of-materials
+    and production consumption, and sync suppliers and warehouses. JSON over
+    HTTPS, bearer API-key auth, uri-path versioning (v1), limit/offset pagination.
+  humanURL: https://api.prediko.io/docs/
+  baseURL: https://api.prediko.io/api/v1
+  tags:
+  - Inventory
+  - Purchase Orders
+  - SKUs
+  - Suppliers
+  - Warehouses
+  properties:
+  - type: Documentation
+    url: https://api.prediko.io/docs/
+  - type: APIReference
+    url: https://api.prediko.io/docs/api-reference/
+  - type: GettingStarted
+    url: https://api.prediko.io/docs/getting-started/
+  - type: Authentication
+    url: https://api.prediko.io/docs/authentication/
+  - type: Authentication
+    url: authentication/prediko-authentication.yml
+  - type: Conventions
+    url: conventions/prediko-conventions.yml
+  - type: ErrorCatalog
+    url: errors/prediko-problem-types.yml
+  - type: DataModel
+    url: data-model/prediko-data-model.yml
+  - type: Conformance
+    url: conformance/prediko-conformance.yml
+  - type: MCPServer
+    url: mcp/prediko-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +87,58 @@ maintainers:
 common:
 - type: Website
   url: https://prediko.io/
+- type: DeveloperPortal
+  url: https://api.prediko.io/docs/
+- type: Documentation
+  url: https://api.prediko.io/docs/
+- type: APIReference
+  url: https://api.prediko.io/docs/api-reference/
+- type: GettingStarted
+  url: https://api.prediko.io/docs/getting-started/
+- type: Pricing
+  url: https://www.prediko.io/pricing
+- type: Blog
+  url: https://www.prediko.io/blog
+- type: Support
+  url: https://help.prediko.io/en/
+- type: StatusPage
+  url: https://status.prediko.io/
+- type: ChangeLog
+  url: https://www.prediko.io/product-updates
+- type: ChangeLog
+  url: changelog/prediko-changelog.yml
+- type: PrivacyPolicy
+  url: https://www.prediko.io/privacy-policy
+- type: Integrations
+  url: https://www.prediko.io/integrations
+- type: Authentication
+  url: authentication/prediko-authentication.yml
+- type: Lifecycle
+  url: lifecycle/prediko-lifecycle.yml
+- type: Conventions
+  url: conventions/prediko-conventions.yml
+- type: ErrorCatalog
+  url: errors/prediko-problem-types.yml
+- type: DataModel
+  url: data-model/prediko-data-model.yml
+- type: Conformance
+  url: conformance/prediko-conformance.yml
+- type: MCPServer
+  url: mcp/prediko-mcp.yml
+- type: LLMsTxt
+  url: llms/prediko-llms.txt
+- type: WellKnown
+  url: well-known/prediko-well-known.yml
+- type: SecurityTxt
+  url: well-known/prediko-security.txt
+- type: Security
+  url: https://www.prediko.io/security
+- type: VulnerabilityDisclosure
+  url: security/prediko-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/prediko-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1

@@ -1,0 +1,67 @@
+generated: '2026-07-20'
+method: derived
+source: https://api.prediko.io/docs/api-reference/
+note: >-
+  Entity graph derived from the documented REST resource surface (no OpenAPI spec
+  is published). Relationships are inferred from resource paths and inventory
+  domain semantics; treat as an approximate ERD.
+entities:
+- name: Order
+  description: Purchase/production order; created or updated via POST /orders.
+  id_prefix: ord_
+  operations:
+  - 'GET /orders'
+  - 'GET /orders/{id}'
+  - 'POST /orders'
+  - 'PATCH /orders/status'
+  - 'DELETE /orders/{id}'
+- name: Delivery
+  description: Delivery associated with an order.
+  operations:
+  - 'GET /orders/delivery'
+- name: Consumption
+  description: Raw-material consumption recorded against an order.
+  operations:
+  - 'GET /orders/{id}/consumption'
+  - 'PUT /orders/{id}/consumption'
+- name: BillOfMaterials
+  description: BOM recipe defining raw materials that make up a finished SKU.
+  operations:
+  - 'GET /bill-of-materials'
+- name: SKU
+  description: Stock-keeping unit with stock levels, inventory duration, procurement suggestions.
+  operations:
+  - 'POST /skus'
+- name: Supplier
+  description: Supplier of SKUs / raw materials, linked to purchase orders.
+  operations:
+  - 'GET /suppliers'
+- name: Warehouse
+  description: Stocking location for inventory.
+  operations:
+  - 'GET /warehouses'
+relationships:
+- from: Order
+  to: Delivery
+  type: has_many
+  via: order
+- from: Order
+  to: Consumption
+  type: has_one
+  via: order_id
+- from: Order
+  to: Supplier
+  type: belongs_to
+  via: supplier
+- from: BillOfMaterials
+  to: SKU
+  type: belongs_to
+  via: sku
+- from: SKU
+  to: Warehouse
+  type: has_many
+  via: warehouse
+- from: SKU
+  to: Supplier
+  type: has_many
+  via: supplier

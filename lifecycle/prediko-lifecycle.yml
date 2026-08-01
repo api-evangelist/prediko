@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.prediko.io/docs/
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://api.prediko.io/docs/api-reference/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation/sunset policy or RFC 8594 header support is documented.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.prediko.io/
+changelog: https://www.prediko.io/product-updates
+deprecated_operations: []
+notes: >-
+  Single active API version (v1) served under the /api/v1 path prefix. A public
+  status page and a dated product-updates changelog are published; no explicit
+  SLA or deprecation policy was found.

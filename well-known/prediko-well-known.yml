@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on prediko hosts
+host: https://www.prediko.io
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  file: prediko-security.txt
+  host: https://www.prediko.io
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  security.txt is served from the marketing host (www.prediko.io); the API host
+  api.prediko.io returns 404 for all probed /.well-known/ paths. No OIDC/OAuth
+  discovery documents are published (the API uses bearer API-key auth, not OAuth).

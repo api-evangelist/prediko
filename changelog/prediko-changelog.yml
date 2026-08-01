@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.prediko.io/product-updates
+scheme: dated-product-updates
+cadence: monthly (multiple feature releases per month)
+current_version: v1
+note: >-
+  Prediko publishes a product-updates page covering the SaaS application. It is
+  not an API-versioned changelog; the REST API remains at v1. Recent window
+  captured below verbatim from the product-updates page.
+entries:
+- date: '2026-06'
+  title: New Transfers Tab
+  highlights: Pivot view per location and pack-size scaling.
+- date: '2026-06'
+  title: Supplier & Purchase Order Management
+  highlights: Linked-suppliers columns and purchase-order cost features.
+- date: '2026-06'
+  title: Reporting & Exports
+  highlights: SKU images in exports and FIFO report enhancements.
+- date: '2026-05'
+  title: Release of PIA
+  highlights: Data-accuracy improvements, design updates, and notification integrations.
+- date: '2026-05'
+  title: Release of Analytics
+  highlights: Email scheduling of Pia insights and new notification settings.
+- date: '2026-04'
+  title: Smart Inventory Transfers
+  highlights: Warehouse-to-store recommendations and capacity warnings.
+- date: '2026-04'
+  title: Pia Enhancements
+  highlights: Email scheduling of insights and new connection settings.
+- date: '2026-03'
+  title: SKU Hover Card
+  highlights: Complete SKU details on hover in the planning system.

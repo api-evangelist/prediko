@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.prediko.io/docs/authentication/
+docs: https://api.prediko.io/docs/authentication/
+summary:
+  types:
+  - http
+  api_key_in:
+  - header
+  oauth2_flows: []
+schemes:
+- name: bearerApiKey
+  type: http
+  scheme: bearer
+  description: >-
+    All API requests authenticate with a Prediko API key passed as an
+    Authorization bearer token. Keys use the prefix pk_live_ and are created in
+    the Prediko Dashboard under Settings > API Keys. A key is displayed only once
+    at creation; lost keys must be recreated. Missing or invalid keys return 401.
+  header: Authorization
+  header_format: 'Authorization: Bearer pk_live_YOUR_API_KEY'
+  key_prefix: pk_live_
+  provisioning: Prediko Dashboard > Settings > API Keys > Create API Key
+  sources:
+  - https://api.prediko.io/docs/authentication/
+notes: >-
+  No OAuth2/OIDC flows are offered. Insufficient permissions on a valid key
+  return 403. No test-key (pk_test_) prefix is documented.

@@ -1,0 +1,6 @@
+Contact: mailto:security@prediko.io
+Contact: https://prediko.io/security
+Expires: 2029-06-18T00:00:00.000Z
+Policy: https://prediko.io/security
+Preferred-Languages: en
+Canonical: https://www.prediko.io/.well-known/security.txt

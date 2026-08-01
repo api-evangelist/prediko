@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.prediko.io/docs/guides/errors/
+format: json-detail
+envelope:
+  field: detail
+  description: >-
+    Errors return a single JSON field `detail` carrying a human-readable message
+    (e.g. {"detail": "Order 'ord_invalid' not found"}). Not RFC 9457
+    application/problem+json; no type/title/status members in the body.
+problems:
+- status: 400
+  title: Bad Request
+  meaning: Invalid parameters
+  remediation: Verify all request parameters are correctly formatted and valid.
+- status: 401
+  title: Unauthorized
+  meaning: Invalid or missing API key
+  remediation: >-
+    Include the `Authorization: Bearer pk_live_...` header and verify the key is
+    valid. Example detail: "Missing Authorization header".
+- status: 403
+  title: Forbidden
+  meaning: Valid key but insufficient permissions
+  remediation: Confirm the API key has the necessary access permissions.
+- status: 404
+  title: Not Found
+  meaning: Resource does not exist
+  remediation: >-
+    Verify the resource ID is correct and exists within your tenant. Example
+    detail: "Order 'ord_invalid' not found".
+- status: 500
+  title: Internal Error
+  meaning: Server-side failure
+  remediation: Retry the request; contact support if the issue persists.
+notes: >-
+  A 200 is documented as the success status. Rate limiting (429) is not
+  documented. Derived-from-docs error reference; no OpenAPI spec is published to
+  cross-reference per-operation responses.

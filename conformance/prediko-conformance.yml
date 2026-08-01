@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: derived
+source: https://api.prediko.io/docs/
+note: >-
+  Standards conformance derived from the public docs and error reference. No
+  OpenAPI spec is published; assertions reflect documented behavior only.
+standards:
+- id: bearer-token-auth
+  conforms: true
+  evidence: Authorization Bearer API-key (pk_live_) documented for all requests.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth2 flows; API-key bearer auth only.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: 'Errors use a bare {"detail": "..."} envelope, not application/problem+json.'
+- id: pagination
+  conforms: true
+  evidence: limit/offset query params with total/limit/offset/has_more response fields.
+- id: idempotency
+  conforms: false
+  evidence: No client-supplied Idempotency-Key contract documented.
+- id: uri-versioning
+  conforms: true
+  evidence: Version pinned in path (/api/v1).
+- id: rest-json
+  conforms: true
+  evidence: JSON request/response REST resources over HTTPS.

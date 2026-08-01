@@ -1,0 +1,51 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://api.prediko.io/docs/api-reference/
+note: >-
+  No official hosted/remote MCP server was found for Prediko. This is a CANDIDATE
+  tool list derived one-to-one from the documented REST API reference so an MCP
+  wrapper could be generated. Not a published server.
+server:
+  name: prediko
+  transport: http
+  url: null
+  base_url: https://api.prediko.io/api/v1
+  auth: bearer pk_live_ API key
+tools:
+- name: list_orders
+  description: List all orders (supports limit/offset pagination).
+  source_operation: 'GET /orders'
+- name: get_order
+  description: Get a specific order by id.
+  source_operation: 'GET /orders/{id}'
+- name: upsert_orders
+  description: Create or update orders.
+  source_operation: 'POST /orders'
+- name: update_order_status
+  description: Update order status.
+  source_operation: 'PATCH /orders/status'
+- name: delete_order
+  description: Delete an order by id.
+  source_operation: 'DELETE /orders/{id}'
+- name: list_deliveries
+  description: List order deliveries.
+  source_operation: 'GET /orders/delivery'
+- name: list_bill_of_materials
+  description: List bill-of-materials (BOM) recipes; Excel export via format=excel.
+  source_operation: 'GET /bill-of-materials'
+- name: get_order_consumption
+  description: Get raw-material consumption for an order.
+  source_operation: 'GET /orders/{id}/consumption'
+- name: update_order_consumption
+  description: Update actual raw-material consumption quantities for an order.
+  source_operation: 'PUT /orders/{id}/consumption'
+- name: list_skus
+  description: List all SKUs with stock levels and procurement suggestions.
+  source_operation: 'POST /skus'
+- name: list_suppliers
+  description: List all suppliers.
+  source_operation: 'GET /suppliers'
+- name: list_warehouses
+  description: List all warehouses.
+  source_operation: 'GET /warehouses'

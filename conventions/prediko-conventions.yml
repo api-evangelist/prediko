@@ -1,0 +1,51 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.prediko.io/docs/api-reference/
+docs: https://api.prediko.io/docs/
+authentication:
+  style: bearer-api-key
+  header: Authorization
+  format: 'Bearer pk_live_...'
+  see: authentication/prediko-authentication.yml
+base_url: https://api.prediko.io/api/v1
+versioning:
+  scheme: uri-path
+  current: v1
+  see: lifecycle/prediko-lifecycle.yml
+pagination:
+  style: limit-offset
+  params:
+  - name: limit
+    description: Number of results per page.
+  - name: offset
+    description: Number of results to skip.
+  response_fields:
+  - total
+  - limit
+  - offset
+  - has_more
+  formats:
+  - name: paginated
+    description: data array plus a `pagination` object (total, limit, offset, has_more).
+  - name: simple
+    description: data array plus a total count only.
+idempotency:
+  supported: false
+  notes: >-
+    No Idempotency-Key header or idempotent-retry contract is documented. POST
+    /orders performs create-or-update (upsert) keyed on the order payload, but no
+    client-supplied idempotency key is documented.
+error_envelope:
+  field: detail
+  see: errors/prediko-problem-types.yml
+rate_limit_signaling:
+  documented: false
+metadata:
+  documented: false
+request_tracing:
+  documented: false
+field_expansion:
+  documented: false
+notes: >-
+  Cross-cutting semantics derived from the public API reference and error guide.
+  No OpenAPI spec is published; conventions captured from docs prose.
