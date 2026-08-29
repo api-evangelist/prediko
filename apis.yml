@@ -10,6 +10,17 @@ description: >-
   procurement suggestions, sync suppliers and warehouses, and automate inventory
   workflows. "Pia" is Prediko's AI inventory agent. The company is backed by
   Techstars.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
