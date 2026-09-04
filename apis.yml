@@ -23,15 +23,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://cdn.prod.website-files.com/68ceeb4f2c25c399d42f4726/696653966c56edb6b763849e_predikoinventorymanagement.png
 url: https://raw.githubusercontent.com/api-evangelist/prediko/refs/heads/main/apis.yml
@@ -98,8 +99,9 @@ apis:
     url: data-model/prediko-data-model.yml
   - type: Conformance
     url: conformance/prediko-conformance.yml
-  - type: MCPServer
+  - type: X-MCPServerCandidate
     url: mcp/prediko-mcp.yml
+    note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -144,8 +146,9 @@ common:
   url: data-model/prediko-data-model.yml
 - type: Conformance
   url: conformance/prediko-conformance.yml
-- type: MCPServer
+- type: X-MCPServerCandidate
   url: mcp/prediko-mcp.yml
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 - type: LLMsTxt
   url: llms/prediko-llms.txt
 - type: WellKnown
