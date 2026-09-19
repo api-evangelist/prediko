@@ -79,6 +79,12 @@ apis:
   - Purchase Orders
   - SKUs
   - Suppliers
+  - Warehouse
+  tags_raw:
+  - Inventory
+  - Purchase Orders
+  - SKUs
+  - Suppliers
   - Warehouses
   properties:
   - type: Documentation
