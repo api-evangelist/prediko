@@ -1,0 +1,36 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.prediko.io/pricing
+sources:
+- https://www.prediko.io/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Pricing tiered by GMV in last 12 months (selector lists bands from <$100k to $50m+); only the $49/month
+  price for the lowest band is shown in the text, plus a $20 raw materials add-on. Monthly/Annual toggle
+  with '2 months free'; annual plans billed quarterly or annually; billed through Shopify Billing.
+plan_count: 2
+currency: USD
+plans:
+- name: <$100K in Annual Revenue
+  price_text: $49/month
+  price: 49
+  currency: USD
+  period: month
+  included_quota: Unlimited Users, SKUs, POs; Revenue & Inventory AI Forecasting; Purchase Order Management
+    & Buying Alerts; Multiple Stores & Locations; PIA; Full API Access; 14 day free trial
+- name: Raw Materials Forecasting & BOMs (Plan Add-on)
+  price_text: $20
+  price: 20
+  currency: USD
+  period: month
+  unit: add-on
